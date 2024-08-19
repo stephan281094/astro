@@ -1597,7 +1597,7 @@ export interface AstroUserConfig {
 		 * @docs
 		 * @name i18n.fallbackType
 		 * @type {String}
-		 * @default "redirect"
+		 * @default `"redirect"`
 		 * @version 4.15.0
 		 * @description
 		 * 
