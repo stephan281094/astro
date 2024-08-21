@@ -1595,20 +1595,6 @@ export interface AstroUserConfig {
 
 		/**
 		 * @docs
-		 * @name i18n.fallbackType
-		 * @type {String}
-		 * @default `"redirect"`
-		 * @version 4.15.0
-		 * @description
-		 * 
-		 * Allows to control how works. By default, it creates pages that will *redirect* to the destination page.
-		 * 
-		 * When `"rewrite"` is chosen, Astro wil create pages that **render** the contents of the fallback page.
-		 */
-		fallbackType: "redirect" | "rewrite"
-
-		/**
-		 * @docs
 		 * @name i18n.routing
 		 * @type {Routing}
 		 * @version 3.7.0
@@ -1678,6 +1664,20 @@ export interface AstroUserConfig {
 					 *```
 					 * */
 					redirectToDefaultLocale?: boolean;
+
+					/**
+					 * @docs
+					 * @name i18n.fallbackType
+					 * @type {String}
+					 * @default `"redirect"`
+					 * @version 4.15.0
+					 * @description
+					 *
+					 * Allows to control how works. By default, it creates pages that will *redirect* to the destination page.
+					 *
+					 * When `"rewrite"` is chosen, Astro will create pages that **render** the contents of the fallback page.
+					 */
+					fallbackType: "redirect" | "rewrite"
 
 					/**
 					 * @name i18n.routing.strategy
