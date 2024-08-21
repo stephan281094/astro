@@ -1820,7 +1820,8 @@ export interface AstroUserConfig {
 		 *
 		 * ```ts
 		 * // src/actions/index.ts
-		 * import { defineAction, z } from "astro:actions";
+		 * import { defineAction } from "astro:actions";
+		 * import { z } from "astro:schema";
 		 *
 		 * export const server = {
 		 *   like: defineAction({
