@@ -1,5 +1,6 @@
 import { db, Comment, Likes, eq, sql } from 'astro:db';
-import { ActionError, defineAction, z } from 'astro:actions';
+import { ActionError, defineAction } from 'astro:actions';
+import { z } from 'astro:schema';
 import { getCollection } from 'astro:content';
 
 export const server = {
@@ -30,7 +31,7 @@ export const server = {
 				body: z.string().min(10),
 			}),
 			handler: async ({ postId, author, body }) => {
-				if (!(await getCollection('blog')).find(b => b.id === postId)) {
+				if (!(await getCollection('blog')).find((b) => b.id === postId)) {
 					throw new ActionError({
 						code: 'NOT_FOUND',
 						message: 'Post not found',

@@ -1,4 +1,5 @@
-import { defineAction, ActionError, z } from 'astro:actions';
+import { defineAction, ActionError } from 'astro:actions';
+import { z } from 'astro:schema';
 
 export const server = {
 	subscribe: defineAction({
@@ -44,7 +45,7 @@ export const server = {
 		accept: 'form',
 		handler: async (_, { locals }) => {
 			return locals.user;
-		}
+		},
 	}),
 	getUserOrThrow: defineAction({
 		accept: 'form',
@@ -57,22 +58,22 @@ export const server = {
 				});
 			}
 			return locals.user;
-		}
+		},
 	}),
 	fireAndForget: defineAction({
 		handler: async () => {
 			return;
-		}
+		},
 	}),
 	zero: defineAction({
 		handler: async () => {
 			return 0;
-		}
+		},
 	}),
 	false: defineAction({
 		handler: async () => {
 			return false;
-		}
+		},
 	}),
 	complexValues: defineAction({
 		handler: async () => {
@@ -80,7 +81,7 @@ export const server = {
 				date: new Date(),
 				set: new Set(),
 				url: new URL('https://example.com'),
-			}
-		}
-	})
+			};
+		},
+	}),
 };
