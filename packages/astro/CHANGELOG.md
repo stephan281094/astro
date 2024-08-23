@@ -1,5 +1,23 @@
 # astro
 
+## 4.14.5
+
+### Patch Changes
+
+- [#11809](https://github.com/withastro/astro/pull/11809) [`62e97a2`](https://github.com/withastro/astro/commit/62e97a20f72bacb017c633ddcb776abc89167660) Thanks [@bholmesdev](https://github.com/bholmesdev)! - Fixes usage of `.transform()`, `.refine()`, `.passthrough()`, and other effects on Action form inputs.
+
+- [#11812](https://github.com/withastro/astro/pull/11812) [`260c4be`](https://github.com/withastro/astro/commit/260c4be050f91353bc5ba6af073e7bc17429d552) Thanks [@bholmesdev](https://github.com/bholmesdev)! - Exposes `ActionAPIContext` type from the `astro:actions` module.
+
+- [#11813](https://github.com/withastro/astro/pull/11813) [`3f7630a`](https://github.com/withastro/astro/commit/3f7630afd697809b1d4fbac6edd18153983c70ac) Thanks [@bholmesdev](https://github.com/bholmesdev)! - Fixes unexpected `undefined` value when calling an action from the client without a return value.
+
+## 4.14.4
+
+### Patch Changes
+
+- [#11794](https://github.com/withastro/astro/pull/11794) [`3691a62`](https://github.com/withastro/astro/commit/3691a626fb67d617e5f8bd057443cd2ff6caa054) Thanks [@bholmesdev](https://github.com/bholmesdev)! - Fixes unexpected warning log when using Actions on "hybrid" rendered projects.
+
+- [#11801](https://github.com/withastro/astro/pull/11801) [`9f943c1`](https://github.com/withastro/astro/commit/9f943c1344671b569a0d1ddba683b3cca0068adc) Thanks [@delucis](https://github.com/delucis)! - Fixes a bug where the `filePath` property was not available on content collection entries when using the content layer `file()` loader with a JSON file that contained an object instead of an array. This was breaking use of the `image()` schema utility among other things.
+
 ## 4.14.3
 
 ### Patch Changes
